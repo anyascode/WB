@@ -12,9 +12,9 @@ export function loadMap() {
         <div
           class="col-xl-1 col-lg-2 col-6 d-flex flex-row align-items-center justify-content-end gap-1 pb-2 ps-4 mainContent"
         >
-          <img src="icons/down.svg" alt="arrow" />
-          <img src="icons/Union.svg" alt="refresh" />
-          <img src="icons/close.svg" alt="close" />
+          <img src="../icons/down.svg" alt="arrow" />
+          <img src="../icons/Union.svg" alt="refresh" />
+          <img src="../icons/close.svg" alt="close" />
         </div>
         <div class="col px-4 pb-4 mainContent">
           <div

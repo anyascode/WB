@@ -8,7 +8,7 @@ export function loadHome() {
       <div class="row p-4 d-flex flex-row mainBackground">
         <div class="col-xl-4 col-lg-6 p-4 mainContent">
           <img
-            src="images/IMG_1807.jpg"
+            src="../images/IMG_1807.jpg"
             alt="My Personal Photo"
             class="img-fluid"
           />
