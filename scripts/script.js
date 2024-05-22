@@ -30,3 +30,5 @@ function handleLocation() {
 window.onpopstate = handleLocation;
 window.route = route;
 handleLocation();
+
+document.querySelector(".tabMenu").addEventListener("click", route);
