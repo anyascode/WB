@@ -1,34 +1,32 @@
 const start = Date.now();
 sessionStorage.setItem("start", String(start));
 
-const route = (event) => {
-  event = event || window.event;
-  event.preventDefault();
-  window.history.pushState({}, "", event.target.href);
-  handleLocation();
-};
+import { loadHome } from "./home.js";
+import { loadMap } from "./map.js";
+import { loadTimer } from "./timer.js";
 
 const routes = {
-  "/": "resume",
-  "/map": "map",
-  "/timerpage": "timerpage",
+  "/": loadHome,
+  "/map": loadMap,
+  "/timer": loadTimer,
 };
 
-function showPage(page) {
-  document.querySelectorAll("#main > div").forEach((div) => {
-    div.style.display = "none";
+loadHome();
+
+window.addEventListener("popstate", () => {
+  const handle = routes[window.location.pathname];
+  handle();
+});
+
+const links = document.querySelectorAll(".tabMenu a");
+for (const link of links) {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.history.pushState({}, "", event.target.href);
+
+    const url = new URL(event.target.href);
+    const handle = routes[url.pathname];
+
+    handle();
   });
-  document.getElementById(page).style.display = "block";
-  document.querySelector(".tabMenu").dataset.page = page;
 }
-
-function handleLocation() {
-  const path = window.location.pathname;
-  const page = routes[path];
-  showPage(page || "resume");
-}
-window.onpopstate = handleLocation;
-window.route = route;
-handleLocation();
-
-document.querySelector(".tabMenu").addEventListener("click", route);

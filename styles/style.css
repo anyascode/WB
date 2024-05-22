@@ -69,8 +69,8 @@ svg {
     outline: 1px solid #f1f1f1;
   }
 }
-[data-page="timerpage"] {
-  div#timerpageTab {
+[data-page="timer"] {
+  div#timerTab {
     background-color: #f1f1f1;
     outline: 1px solid #f1f1f1;
   }
@@ -132,8 +132,8 @@ header {
       border: none;
     }
   }
-  [data-page="timerpage"] {
-    div#timerpageTab {
+  [data-page="timer"] {
+    div#timerTab {
       border: none;
     }
   }
