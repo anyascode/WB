@@ -1,27 +1,10 @@
 const main = document.getElementById("main");
 const tabMenu = document.querySelector(".tabMenu");
 
-export function loadTimer() {
+export async function loadTimer() {
   tabMenu.dataset.page = "timer";
-  main.innerHTML = `
-    <div id="timerpage">
-      <div class="row p-4 mainBackground">
-        <div
-          class="col-6 col-lg-10 col-xl-11 d-flex flex-column gap-4 px-4 pt-3 pb-4 mainContent"
-        >
-          <div class="titleTimer">Timer</div>
-          <div id="timer">00:00:00</div>
-        </div>
-        <div
-          class="col-6 col-lg-2 col-xl-1 d-flex flex-row align-items-center justify-content-end gap-1 px-4 pb-5 mainContent"
-        >
-          <img src="../icons/down.svg" alt="arrow" />
-          <img src="../icons/Union.svg" alt="refresh" />
-          <img src="../icons/close.svg" alt="close" />
-        </div>
-      </div>
-    </div>
-  `;
+  const html = await fetch("../pages/timer.html").then((data) => data.text());
+  main.innerHTML = html;
 
   let begin = Number(sessionStorage.getItem("start"));
 
