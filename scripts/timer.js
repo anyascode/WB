@@ -3,7 +3,7 @@ const tabMenu = document.querySelector(".tabMenu");
 
 export async function loadTimer() {
   tabMenu.dataset.page = "timer";
-  const html = await fetch("./pages/timer.html").then((data) => data.text());
+  const html = await fetch("/pages/timer.html").then((data) => data.text());
   main.innerHTML = html;
 
   let begin = Number(sessionStorage.getItem("start"));
