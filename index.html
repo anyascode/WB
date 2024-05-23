@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header>
+        <div class="row d-flex flex-row align-items-start pt-2 pb-2 pe-3">
+          <div
+            class="col-lg-3 col-xl-3 d-flex flex-row gap-2 justify-content-start pageTitle ps-lg-4 pt-3"
+          >
+            <a href="/" class="d-flex flex-row gap-2"
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.73251 16.0174C9.91251 16.0174 10.0825 15.9474 10.2125 15.8074C10.4525 15.5374 10.4325 15.1274 10.1725 14.8874L7.28136 12.1674H15.35C16.6479 12.1674 17.7 13.2195 17.7 14.5174V16.2971C17.7 16.656 17.991 16.9471 18.35 16.9471C18.709 16.9471 19 16.656 19 16.2971V14.5174C19 12.5015 17.3658 10.8674 15.35 10.8674H7.27185L7.27194 10.8519L10.1325 8.43738C10.4025 8.19738 10.4125 7.78738 10.1725 7.51738C9.93249 7.25738 9.52249 7.23738 9.25249 7.47738L5.2325 10.9819C4.9225 11.2619 4.9225 11.7419 5.2325 12.0219L9.29251 15.8474C9.42251 15.9674 9.57251 16.0174 9.73251 16.0174Z"
+                  fill="#505050"
+                ></path>
+              </svg>
+              <p class="userPages">User pages</p></a
+            >
+            <p>-</p>
+            <a href="#"> <p>Profile</p></a>
+          </div>
+
+          <div class="col-xl-6 col-lg-5"></div>
+          <div class="col-md-4 d-none d-md-block d-lg-none">
+            <a
+              href="#"
+              class="d-flex flex-row gap-1 align-items-center justify-content-center headerMenu"
+              ><img src="icons/stat.svg" alt="statistics" /> Statistics</a
+            >
+          </div>
+          <div class="col-md-4 d-none d-md-block d-lg-none">
+            <a
+              href="#"
+              class="d-flex flex-row gap-1 align-items-center justify-content-center headerMenu"
+              ><img src="icons/calc.svg" alt="invoices" /> Invoices</a
+            >
+          </div>
+          <div class="col-md-4 d-none d-md-block d-lg-none">
+            <a
+              href="#"
+              class="d-flex flex-row gap-1 align-items-center justify-content-center headerMenu"
+            >
+              <img src="icons/schedule.svg" alt="schedule" />
+
+              Schedule</a
+            >
+          </div>
+          <div class="col-xl-3 col-lg-4">
+            <div class="row">
+              <div class="col-4 d-md-none d-lg-block">
+                <a
+                  href="#"
+                  class="d-flex flex-column gap-1 align-items-center headerMenu"
+                  ><img src="icons/stat.svg" alt="statistics" /> Statistics</a
+                >
+              </div>
+              <div class="col-4 d-md-none d-lg-block">
+                <a
+                  href="#"
+                  class="d-flex flex-column gap-1 align-items-center headerMenu"
+                  ><img src="icons/calc.svg" alt="invoices" /> Invoices</a
+                >
+              </div>
+              <div class="col-4 d-md-none d-lg-block">
+                <a
+                  href="#"
+                  class="d-flex flex-column gap-1 align-items-center headerMenu"
+                >
+                  <img src="icons/schedule.svg" alt="schedule" />
+                  Schedule</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row d-flex align-items-center justify-content-evenly ps-4 pe-4 tabMenu"
+          data-page="resume"
+        >
+          <div class="col-xl-3 col-lg-4">
+            <div class="row">
+              <div
+                class="col-4 d-flex justify-content-center pt-2 pb-2 gap-2 tabMenuItem"
+                id="resumeTab"
+                data-page="resume"
+              >
+                <a href="/">
+                  <img src="icons/hamburger.svg" alt="activity" />
+                  Activity
+                </a>
+              </div>
+              <div
+                class="col-4 d-flex justify-content-center pt-2 pb-2 gap-2 tabMenuItem"
+                id="mapTab"
+                data-page="map"
+              >
+                <a href="/map">
+                  <img src="icons/location.svg" alt="location" />
+                  Map</a
+                >
+              </div>
+              <div
+                class="col-4 d-flex justify-content-center pt-2 pb-2 gap-2 tabMenuItem"
+                id="timerTab"
+                data-page="timer"
+              >
+                <a href="/timer">
+                  <img src="icons/time.svg" alt="timer" />
+                  Time</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-5 col-lg-3"></div>
+          <div class="col-xl-4 col-lg-5">
+            <div class="row">
+              <div
+                class="col-3 d-flex justify-content-center gap-2 pt-2 pb-2 tabMenuItem"
+              >
+                <a href="#">
+                  <img src="icons/notes.svg" alt="notes" />
+                  <span class="tabMenuText"> Notes</span>
+                </a>
+              </div>
+              <div
+                class="col-3 d-flex flex-row justify-content-center gap-2 pt-2 pb-2 tabMenuItem"
+              >
+                <a href="#">
+                  <img src="icons/friends.svg" alt="friends" />
+
+                  <span class="tabMenuText"> Friends</span>
+                </a>
+              </div>
+              <div
+                class="col-3 d-flex justify-content-center gap-2 pt-2 pb-2 tabMenuItem"
+              >
+                <a href="#">
+                  <img src="icons/photos.svg" alt="photos" />
+                  <span class="tabMenuText">Photos</span></a
+                >
+              </div>
+              <div
+                class="col-3 d-flex flex-row justify-content-center pt-2 pb-2 settingsTab"
+              >
+                <a href="#">
+                  <img src="icons/settings.svg" alt="settings" />
+                  <img
+                    src="icons/arrowdown.svg"
+                    alt="arrow"
+                    class="arrowdown"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="container-fluid" id="main"></div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=01ac2d52-f680-41d7-824a-21508633a49e&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script type="module" src="scripts/script.js"></script>
+  </body>
+</html>
