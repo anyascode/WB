@@ -3,7 +3,7 @@ const tabMenu = document.querySelector(".tabMenu");
 
 export async function loadMap() {
   tabMenu.dataset.page = "map";
-  const html = await fetch("pages/map.html").then((data) => data.text());
+  const html = await fetch("./pages/map.html").then((data) => data.text());
   main.innerHTML = html;
 
   window.setTimeout(() => ymaps.ready(init), 1000);
